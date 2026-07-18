@@ -7,78 +7,171 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- HERO -->
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Chargement...</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-water"></i>
+                <span>Guide RP</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#rp" class="nav-link">Le RP</a></li>
+                <li><a href="#erlc" class="nav-link">ERLC</a></li>
+                <li><a href="#serveurs" class="nav-link">Serveurs</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
     <header class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+        <div class="hero-gradient"></div>
+        
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-water"></i>
             </div>
-            <h1 class="hero-title">Le Guide du Roleplay</h1>
-            <p class="hero-subtitle">Pour Alicia — Ne jamais décevoir</p>
-            <a href="#rp" class="hero-btn">
-                <span>Commencer</span>
-                <i class="fas fa-arrow-down"></i>
-            </a>
+            <h1 class="hero-title">
+                <span class="title-line">Le Guide du</span>
+                <span class="title-line highlight">Roleplay</span>
+            </h1>
+            <p class="hero-subtitle fade-in">Pour Alicia — Ne jamais décevoir</p>
+            <div class="hero-buttons fade-in">
+                <a href="#rp" class="btn btn-primary">
+                    <span>Découvrir</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#erlc" class="btn btn-secondary">
+                    <span>En savoir plus</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
         </div>
     </header>
 
     <!-- SECTION 1: LE RP -->
     <section id="rp" class="section section-rp">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
+            <div class="section-header reveal">
+                <div class="section-badge">
                     <i class="fas fa-theater-masks"></i>
                 </div>
                 <h2 class="section-title">C'est quoi le Roleplay ?</h2>
-                <p class="section-subtitle">L'art d'incarner un personnage</p>
+                <p class="section-subtitle">L'art d'incarner un personnage et de vivre des aventures</p>
             </div>
 
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3><i class="fas fa-users"></i> Le Concept</h3>
-                    <p>Le <strong>roleplay (RP)</strong> est une forme de jeu où tu <strong>incarnes un personnage fictif</strong> dans un univers donné. Tu parles, agis, penses et réagis comme si tu étais cette personne, pas comme toi-même.</p>
+            <div class="content-wrapper">
+                <div class="content-card reveal-left">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Le Concept</h3>
+                    <p>Le <strong>roleplay (RP)</strong> est une forme de jeu où tu <strong>incarnes un personnage fictif</strong> dans un univers donné. Tu parles, agis, penses et réagis comme si tu étais cette personne.</p>
                     <p>C'est du théâtre improvisé en ligne : tu crées une histoire, des relations, et tu vis des aventures à travers ton personnage.</p>
+                    <div class="card-decoration"></div>
                 </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-user-tag"></i> Créer son Personnage</h3>
+                <div class="content-card reveal-right">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tag"></i>
+                    </div>
+                    <h3>Créer son Personnage</h3>
                     <ul class="feature-list">
-                        <li><strong>Nom et identité :</strong> Ton perso a un nom, un âge, un physique</li>
-                        <li><strong>Backstory :</strong> Une histoire passée qui explique qui il est</li>
-                        <li><strong>Personnalité :</strong> Ses traits de caractère, ses défauts, ses qualités</li>
-                        <li><strong>Objectifs :</strong> Ce qu'il veut accomplir dans sa vie</li>
-                        <li><strong>Métier :</strong> Police, criminel, médecin, civil, etc.</li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Nom et identité :</strong> Ton perso a un nom, un âge, un physique</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Backstory :</strong> Une histoire passée qui explique qui il est</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Personnalité :</strong> Ses traits de caractère, ses défauts</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Objectifs :</strong> Ce qu'il veut accomplir dans sa vie</span>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-comments"></i> IC vs OOC</h3>
-                    <div class="comparison">
+                <div class="content-card full-width reveal-up">
+                    <div class="card-header-comparison">
+                        <div class="comparison-badge ic">
+                            <i class="fas fa-user"></i>
+                            <span>IC (In Character)</span>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="comparison-badge ooc">
+                            <i class="fas fa-user-friends"></i>
+                            <span>OOC (Out Of Character)</span>
+                        </div>
+                    </div>
+                    <div class="comparison-content">
                         <div class="comparison-item">
-                            <span class="label ic">IC (In Character)</span>
-                            <p>Quand tu parles <strong>en tant que ton personnage</strong>. Tout ce que tu dis fait partie du jeu.</p>
+                            <p>Quand tu parles <strong>en tant que ton personnage</strong>. Tout ce que tu dis fait partie du jeu et de l'histoire.</p>
                         </div>
                         <div class="comparison-item">
-                            <span class="label ooc">OOC (Out Of Character)</span>
-                            <p>Quand tu parles <strong>en tant que toi-même</strong>, le vrai joueur. Pour discuter hors jeu.</p>
+                            <p>Quand tu parles <strong>en tant que toi-même</strong>, le vrai joueur. Pour discuter hors jeu avec les autres.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="content-card highlight">
-                    <h3><i class="fas fa-lightbulb"></i> Exemple Concret</h3>
-                    <div class="example-box">
-                        <p><strong>Situation :</strong> Ton personnage se fait arrêter par la police</p>
-                        <br>
-                        <p><span class="badge-ic">IC</span> Tu joues la scène : tu stresses, tu poses des questions, tu acceptes ou contestes l'arrestation selon la personnalité de ton perso.</p>
-                        <br>
-                        <p><span class="badge-ooc">OOC</span> Tu ne dis PAS : "C'est nul, vous abusez, je quitte le serveur". Tu restes dans le jeu.</p>
+                <div class="example-box reveal-up">
+                    <div class="example-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Exemple Concret</h3>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-scenario">
+                            <span class="scenario-label">Situation :</span>
+                            <p>Ton personnage se fait arrêter par la police</p>
+                        </div>
+                        <div class="example-actions">
+                            <div class="action-item good">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <strong>IC (Bien)</strong>
+                                    <p>Tu joues la scène : tu stresses, tu poses des questions, tu acceptes ou contestes l'arrestation selon la personnalité de ton perso.</p>
+                                </div>
+                            </div>
+                            <div class="action-item bad">
+                                <i class="fas fa-times"></i>
+                                <div>
+                                    <strong>OOC (À éviter)</strong>
+                                    <p>Tu ne dis PAS : "C'est nul, vous abusez, je quitte le serveur". Tu restes dans le jeu.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,90 +181,123 @@
     <!-- SECTION 2: ERLC -->
     <section id="erlc" class="section section-erlc">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
+            <div class="section-header reveal">
+                <div class="section-badge">
                     <i class="fas fa-layer-group"></i>
                 </div>
                 <h2 class="section-title">C'est quoi ERLC ?</h2>
                 <p class="section-subtitle">Emergency Response: Liberty County</p>
             </div>
 
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3><i class="fas fa-gamepad"></i> Le Jeu</h3>
+            <div class="erlc-showcase reveal-up">
+                <div class="showcase-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="showcase-overlay">
+                        <span class="platform-badge">Roblox</span>
+                    </div>
+                </div>
+                <div class="showcase-content">
+                    <h3>Le Jeu de Simulation Policière</h3>
                     <p><strong>ERLC</strong> est un jeu <strong>Roblox</strong> de simulation policière et d'urgence. C'est l'un des jeux de roleplay les plus populaires sur la plateforme.</p>
                     <p>Le jeu se déroule dans le <strong>Liberty County</strong>, une ville américaine fictive où tu peux exercer différents métiers liés à la sécurité et à la justice.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <span class="stat-number">100K+</span>
+                                <span class="stat-label">Joueurs actifs</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <span class="stat-number">4.8/5</span>
+                                <span class="stat-label">Note moyenne</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-briefcase"></i> Les Métiers Disponibles</h3>
-                    <div class="jobs-grid">
-                        <div class="job-item">
+            <div class="jobs-section">
+                <h3 class="subsection-title reveal">Les Métiers Disponibles</h3>
+                <div class="jobs-grid">
+                    <div class="job-card reveal-scale" data-delay="0">
+                        <div class="job-icon police">
                             <i class="fas fa-shield-alt"></i>
-                            <div>
-                                <h4>Police</h4>
-                                <p>Patrouille, arrestations, courses-poursuites, enquêtes</p>
-                            </div>
                         </div>
-                        <div class="job-item">
+                        <h4>Police</h4>
+                        <p>Patrouille, arrestations, courses-poursuites, enquêtes criminelles</p>
+                        <ul class="job-features">
+                            <li><i class="fas fa-car"></i> Véhicules de police</li>
+                            <li><i class="fas fa-handcuffs"></i> Menottes & équipement</li>
+                            <li><i class="fas fa-radio"></i> Radio communication</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card reveal-scale" data-delay="100">
+                        <div class="job-icon fire">
                             <i class="fas fa-fire"></i>
-                            <div>
-                                <h4>Pompier / EMS</h4>
-                                <p>Sauvetages, urgences médicales, éteindre des feux</p>
-                            </div>
                         </div>
-                        <div class="job-item">
+                        <h4>Pompier / EMS</h4>
+                        <p>Sauvetages, urgences médicales, éteindre des feux</p>
+                        <ul class="job-features">
+                            <li><i class="fas fa-ambulance"></i> Ambulances</li>
+                            <li><i class="fas fa-fire-extinguisher"></i> Matériel de secours</li>
+                            <li><i class="fas fa-heartbeat"></i> Soins médicaux</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card reveal-scale" data-delay="200">
+                        <div class="job-icon criminal">
                             <i class="fas fa-user-secret"></i>
-                            <div>
-                                <h4>Criminel</h4>
-                                <p>Braquages, gangs, trafics (sur serveurs autorisés)</p>
-                            </div>
                         </div>
-                        <div class="job-item">
+                        <h4>Criminel</h4>
+                        <p>Braquages, gangs, trafics (sur serveurs autorisés)</p>
+                        <ul class="job-features">
+                            <li><i class="fas fa-car"></i> Véhicules modifiés</li>
+                            <li><i class="fas fa-mask"></i> Anonymat</li>
+                            <li><i class="fas fa-money-bill"></i> Argent rapide</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card reveal-scale" data-delay="300">
+                        <div class="job-icon civil">
                             <i class="fas fa-user"></i>
-                            <div>
-                                <h4>Civil</h4>
-                                <p>Vie normale, travail, interactions sociales</p>
-                            </div>
                         </div>
+                        <h4>Civil</h4>
+                        <p>Vie normale, travail, interactions sociales</p>
+                        <ul class="job-features">
+                            <li><i class="fas fa-briefcase"></i> Métiers variés</li>
+                            <li><i class="fas fa-home"></i> Possessions</li>
+                            <li><i class="fas fa-comments"></i> Vie sociale</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-car"></i> Gameplay</h3>
-                    <ul class="feature-list">
-                        <li><strong>Véhicules :</strong> Voitures de police, ambulances, camions de pompiers, voitures civiles</li>
-                        <li><strong>Armes et équipement :</strong> Selon ton métier (menottes, radio, extincteur, etc.)</li>
-                        <li><strong>Map détaillée :</strong> Ville avec commissariat, hôpital, prison, commerces</li>
-                        <li><strong>Système de salaire :</strong> Tu gagnes de l'argent en travaillant</li>
-                        <li><strong>Personnalisation :</strong> Modifie ton perso et tes véhicules</li>
-                    </ul>
+            <div class="features-grid reveal-up">
+                <div class="feature-box">
+                    <i class="fas fa-car"></i>
+                    <h4>Véhicules</h4>
+                    <p>Voitures de police, ambulances, camions de pompiers, voitures civiles personnalisables</p>
                 </div>
-
-                <div class="content-card highlight">
-                    <h3><i class="fas fa-star"></i> Pourquoi ERLC est Populaire ?</h3>
-                    <div class="features-highlight">
-                        <div class="highlight-item">
-                            <i class="fas fa-check"></i>
-                            <span>Graphismes soignés pour Roblox</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check"></i>
-                            <span>Gameplay réaliste et immersif</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check"></i>
-                            <span>Communauté active et serveurs RP sérieux</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check"></i>
-                            <span>Mises à jour régulières</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check"></i>
-                            <span>Gratuit et accessible à tous</span>
-                        </div>
-                    </div>
+                <div class="feature-box">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Map Détaillée</h4>
+                    <p>Ville complète avec commissariat, hôpital, prison, commerces et zones résidentielles</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-wallet"></i>
+                    <h4>Système Économique</h4>
+                    <p>Gagne de l'argent en travaillant, achète des véhicules et équipements</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Mises à Jour</h4>
+                    <p>Contenu régulièrement ajouté pour améliorer l'expérience de jeu</p>
                 </div>
             </div>
         </div>
@@ -180,110 +306,146 @@
     <!-- SECTION 3: SERVEURS -->
     <section id="serveurs" class="section section-serveurs">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
+            <div class="section-header reveal">
+                <div class="section-badge">
                     <i class="fas fa-server"></i>
                 </div>
                 <h2 class="section-title">C'est quoi un Serveur ?</h2>
                 <p class="section-subtitle">L'espace de jeu communautaire</p>
             </div>
 
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3><i class="fas fa-network-wired"></i> Définition</h3>
+            <div class="server-intro reveal-up">
+                <div class="intro-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Définition</h3>
                     <p>Un <strong>serveur</strong> est un <strong>espace de jeu dédié</strong> où une communauté se retrouve pour jouer ensemble. Chaque serveur a ses propres règles, son staff (équipe de modération) et son ambiance.</p>
-                    <p>Sur ERLC, il existe des centaines de serveurs différents, chacun avec sa spécialité.</p>
                 </div>
+            </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-list-check"></i> Types de Serveurs</h3>
-                    <div class="server-types">
-                        <div class="type-item">
-                            <span class="type-badge serious">Sérieux / RP</span>
+            <div class="server-types-wrapper">
+                <h3 class="subsection-title reveal">Types de Serveurs</h3>
+                <div class="server-types-grid">
+                    <div class="server-type-card reveal-scale serious" data-delay="0">
+                        <div class="type-header">
+                            <i class="fas fa-gavel"></i>
+                            <h4>Sérieux / RP</h4>
+                        </div>
+                        <div class="type-body">
                             <p>Roleplay strict, règles rigoureuses, scénarios réalistes. Tu dois rester dans ton personnage en permanence.</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Immersion totale</li>
+                                <li><i class="fas fa-check"></i> Scénarios complexes</li>
+                                <li><i class="fas fa-check"></i> Communauté engagée</li>
+                            </ul>
                         </div>
-                        <div class="type-item">
-                            <span class="type-badge casual">Casual / Fun</span>
-                            <p>Plus détendu, moins de règles, tu peux être toi-même. Parfait pour débuter.</p>
+                    </div>
+
+                    <div class="server-type-card reveal-scale casual" data-delay="100">
+                        <div class="type-header">
+                            <i class="fas fa-smile"></i>
+                            <h4>Casual / Fun</h4>
                         </div>
-                        <div class="type-item">
-                            <span class="type-badge emergency">Emergency Only</span>
-                            <p>Réservé aux métiers d'urgence (police, pompier, EMS). Scénarios d'intervention.</p>
+                        <div class="type-body">
+                            <p>Plus détendu, moins de règles, tu peux être toi-même. Parfait pour débuter et s'amuser sans pression.</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ambiance détendue</li>
+                                <li><i class="fas fa-check"></i> Idéal débutants</li>
+                                <li><i class="fas fa-check"></i> Moins de contraintes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="server-type-card reveal-scale emergency" data-delay="200">
+                        <div class="type-header">
+                            <i class="fas fa-briefcase-medical"></i>
+                            <h4>Emergency Only</h4>
+                        </div>
+                        <div class="type-body">
+                            <p>Réservé aux métiers d'urgence (police, pompier, EMS). Scénarios d'intervention et de sauvetage.</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Interventions réelles</li>
+                                <li><i class="fas fa-check"></i> Travail d'équipe</li>
+                                <li><i class="fas fa-check"></i> Adrénaline garantie</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="content-card">
-                    <h3><i class="fas fa-gavel"></i> Les Règles Communes</h3>
-                    <ul class="rules-detailed">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Pas de RDM (Random Deathmatch)</strong>
-                                <span>Tuer ou agresser quelqu'un sans raison valable en RP</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Pas de VDM (Vehicle Deathmatch)</strong>
-                                <span>Écraser quelqu'un exprès avec un véhicule</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Pas de Metagaming</strong>
-                                <span>Utiliser des informations OOC (hors jeu) dans ton RP</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Pas de Powergaming</strong>
-                                <span>Forcer des actions sur les autres joueurs sans leur laisser le choix</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Respecter le staff et les joueurs</strong>
-                                <span>Pas d'insultes, de troll ou de comportement toxique</span>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="rules-section reveal-up">
+                <h3 class="subsection-title">Les Règles Essentielles</h3>
+                <div class="rules-grid">
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h4>Pas de RDM</h4>
+                            <p><strong>Random Deathmatch</strong> — Tuer ou agresser quelqu'un sans raison valable en RP</p>
+                        </div>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h4>Pas de VDM</h4>
+                            <p><strong>Vehicle Deathmatch</strong> — Écraser quelqu'un exprès avec un véhicule</p>
+                        </div>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h4>Pas de Metagaming</h4>
+                            <p>Utiliser des informations OOC (hors jeu) dans ton RP</p>
+                        </div>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h4>Pas de Powergaming</h4>
+                            <p>Forcer des actions sur les autres joueurs sans leur laisser le choix</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="content-card highlight">
-                    <h3><i class="fas fa-rocket"></i> Comment Choisir ton Serveur ?</h3>
-                    <div class="steps">
-                        <div class="step">
-                            <span class="step-number">1</span>
-                            <div>
-                                <h4>Détermine ton niveau</h4>
-                                <p>Débutant ? Choisis un serveur casual. Expérimenté ? Tente un serveur sérieux.</p>
-                            </div>
+            <div class="how-to-join reveal-up">
+                <h3 class="subsection-title">Comment Choisir ton Serveur ?</h3>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Détermine ton niveau</h4>
+                            <p>Débutant ? Choisis un serveur casual. Expérimenté ? Tente un serveur sérieux.</p>
                         </div>
-                        <div class="step">
-                            <span class="step-number">2</span>
-                            <div>
-                                <h4>Lis les règles</h4>
-                                <p>Chaque serveur a son règlement. Lis-le avant de rejoindre !</p>
-                            </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Lis les règles</h4>
+                            <p>Chaque serveur a son règlement. Lis-le attentivement avant de rejoindre !</p>
                         </div>
-                        <div class="step">
-                            <span class="step-number">3</span>
-                            <div>
-                                <h4>Rejoins le Discord</h4>
-                                <p>La plupart des serveurs ont un Discord pour la communauté et les annonces.</p>
-                            </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Rejoins le Discord</h4>
+                            <p>La plupart des serveurs ont un Discord pour la communauté et les annonces.</p>
                         </div>
-                        <div class="step">
-                            <span class="step-number">4</span>
-                            <div>
-                                <h4>Observe et apprend</h4>
-                                <p>Regarde comment jouent les autres avant de te lancer.</p>
-                            </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Observe et apprend</h4>
+                            <p>Regarde comment jouent les autres avant de te lancer. Pose des questions !</p>
                         </div>
                     </div>
                 </div>
@@ -292,47 +454,92 @@
     </section>
 
     <!-- MESSAGE FINAL -->
-    <section class="final-message">
+    <section class="final-section">
+        <div class="final-bg"></div>
         <div class="container">
-            <div class="message-box">
-                <i class="fas fa-heart message-icon"></i>
-                <h2>Pour Alicia</h2>
-                <blockquote>"Mon objectif, c'est de ne jamais te décevoir."</blockquote>
-                <p>Maintenant je comprends mieux ton univers. Je suis prêt à apprendre et à jouer avec toi.</p>
-                <span class="signature">— Ta bestie</span>
+            <div class="message-container reveal-up">
+                <div class="message-decoration">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2 class="message-title">Pour Alicia</h2>
+                <blockquote class="message-quote">
+                    "Mon objectif, c'est de ne jamais te décevoir."
+                </blockquote>
+                <p class="message-text">
+                    Maintenant je comprends mieux ton univers. Je suis prêt à apprendre, 
+                    à jouer avec toi, et à vivre des aventures incroyables dans le monde du roleplay.
+                </p>
+                <div class="message-signature">
+                    <span>— Ta bestie, pour toujours</span>
+                    <i class="fas fa-infinity"></i>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <i class="fas fa-heart footer-icon"></i>
-            <p>Fait pour Alicia — 2026</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-water"></i>
+                    <span>Guide RP</span>
+                </div>
+                <p class="footer-text">Fait avec amour pour Alicia — 2026</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-roblox"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- ANIMATIONS JS -->
+    <!-- JAVASCRIPT -->
     <script>
-        // Animation au scroll
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+                    
+                    // Handle staggered animations
+                    if (entry.target.classList.contains('reveal-scale')) {
+                        const delay = entry.target.dataset.delay || 0;
+                        entry.target.style.transitionDelay = `${delay}ms`;
+                    }
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.content-card, .section-header').forEach(el => {
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-scale').forEach(el => {
             observer.observe(el);
         });
 
-        // Smooth scroll pour les ancres
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -343,6 +550,32 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
     </script>
