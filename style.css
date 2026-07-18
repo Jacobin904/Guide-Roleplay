@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
     --bleu-profond: #0a0e27;
@@ -18,20 +14,14 @@ body {
     font-family: 'Inter', sans-serif;
     background: var(--bleu-profond);
     color: var(--text);
-    line-height: 1.6;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 
-/* HERO */
 .hero {
     min-height: 90vh;
-    background: linear-gradient(rgba(10, 14, 39, 0.75), rgba(30, 58, 138, 0.85)), 
-                url('https://cdn.discordapp.com/attachments/1506853237486256209/1528141554374541352/ftmsh2v.jpg?ex=6a5d383a&is=6a5be6ba&hm=17587b30b6c1c58471374d34200fdab34d1c9ce9c82e2cfa9f0539b365ce430a&') center/cover no-repeat;
+    background: linear-gradient(rgba(10,14,39,0.7), rgba(30,58,138,0.8)), 
+                url('background.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +31,7 @@ body {
 .hero-icon {
     font-size: 4rem;
     color: var(--jaune-neon);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-shadow: 0 0 30px var(--jaune-neon);
 }
 
@@ -69,16 +59,15 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .btn:hover {
     background: var(--jaune-neon);
     color: var(--bleu-profond);
-    box-shadow: 0 0 30px rgba(204, 255, 0, 0.4);
+    box-shadow: 0 0 30px var(--jaune-neon);
 }
 
-/* INTRO */
 .intro {
     padding: 80px 0;
     background: var(--bleu-royal);
@@ -97,7 +86,6 @@ body {
     color: var(--jaune-neon);
 }
 
-/* FAQ */
 .faq-section {
     padding: 80px 0;
     background: var(--bleu-profond);
@@ -112,7 +100,7 @@ body {
 
 .faq-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
@@ -121,13 +109,12 @@ body {
     padding: 30px;
     border-radius: 8px;
     border: 1px solid rgba(204, 255, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .faq-card:hover {
     border-color: var(--jaune-neon);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(204, 255, 0, 0.15);
 }
 
 .faq-icon {
@@ -138,32 +125,9 @@ body {
 
 .faq-card h3 {
     color: var(--jaune-neon);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
-.faq-card ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.faq-card li {
-    margin: 10px 0;
-    padding-left: 25px;
-    position: relative;
-}
-
-.faq-card li i {
-    position: absolute;
-    left: 0;
-    color: var(--vert-lime);
-}
-
-.faq-card li i.fa-times {
-    color: #ff6b6b;
-}
-
-/* FINAL MESSAGE */
 .final-message {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--bleu-royal), var(--bleu-profond));
@@ -171,7 +135,7 @@ body {
 
 .heart-box {
     background: rgba(30, 58, 138, 0.5);
-    padding: 50px 30px;
+    padding: 50px;
     border-radius: 10px;
     text-align: center;
     max-width: 700px;
@@ -195,28 +159,11 @@ body {
     font-size: 1.4rem;
     color: var(--violet-reflet);
     font-style: italic;
-    margin-bottom: 20px;
 }
 
-.signature {
-    color: var(--jaune-neon);
-    margin-top: 20px;
-    font-style: italic;
-    font-weight: 600;
-}
-
-/* FOOTER */
 footer {
     background: var(--bleu-profond);
     text-align: center;
     padding: 30px;
     color: var(--violet-reflet);
-    border-top: 1px solid rgba(204, 255, 0, 0.2);
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 2rem; }
-    .section-title { font-size: 1.8rem; }
-    .heart-box { padding: 30px 20px; }
 }
