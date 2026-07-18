@@ -6,25 +6,21 @@
 }
 
 :root {
-    --bg-dark: #1a0a0a;
-    --bg-darker: #0f0505;
-    --bg-card: #2a1515;
-    --bg-card-hover: #351a1a;
-    --red-dark: #5C0A0A;
-    --red-deep: #7A1414;
-    --red-accent: #8B1A1A;
-    --red-muted: #6B2020;
-    --rose-pale: #F8E1E4;
-    --rose-soft: #E8C5C8;
-    --rose-muted: #D4A5A8;
-    --silver: #A8A8A8;
-    --silver-light: #C8C8C8;
-    --silver-dark: #787878;
-    --text-primary: #E8D5D5;
-    --text-secondary: #B8A5A5;
-    --text-muted: #8A7575;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --blue-deep: #0d1642;
+    --blue-royal: #1a237e;
+    --blue-ocean: #1565c0;
+    --yellow-neon: #ccff00;
+    --yellow-bright: #adff00;
+    --orange-gold: #ffa500;
+    --orange-fish: #ffd700;
+    --bg-dark: #0a0f2a;
+    --bg-card: #121a3e;
+    --bg-card-hover: #1a2550;
+    --text-primary: #e8ecff;
+    --text-secondary: #b8c2ff;
+    --text-muted: #8a95cc;
+    --shadow: 0 4px 20px rgba(13, 22, 66, 0.5);
+    --shadow-glow: 0 0 30px rgba(204, 255, 0, 0.2);
 }
 
 html {
@@ -47,93 +43,108 @@ body {
 
 /* ====== HERO ====== */
 .hero {
-    min-height: 90vh;
-    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 50%, var(--red-dark) 100%);
+    min-height: 95vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-bg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 50%, rgba(122, 20, 20, 0.15) 0%, transparent 50%);
-    pointer-events: none;
+    background: url('https://cdn.discordapp.com/attachments/1506853237486256209/1528141554374541352/ftmsh2v.jpg?ex=6a5d383a&is=6a5be6ba&hm=17587b30b6c1c58471374d34200fdab34d1c9ce9c82e2cfa9f0539b365ce430a&') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(13, 22, 66, 0.9) 0%, rgba(26, 35, 126, 0.85) 50%, rgba(10, 15, 42, 0.95) 100%);
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     padding: 40px 25px;
 }
 
 .hero-icon {
-    font-size: 3rem;
-    color: var(--rose-muted);
+    font-size: 3.5rem;
+    color: var(--yellow-neon);
     margin-bottom: 30px;
-    opacity: 0.7;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
     margin-bottom: 20px;
-    color: var(--rose-pale);
-    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--yellow-neon) 0%, var(--orange-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
 }
 
 .subtitle {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: 300;
     margin-bottom: 45px;
     color: var(--text-secondary);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .btn {
     display: inline-block;
-    padding: 14px 40px;
+    padding: 16px 45px;
     background: transparent;
-    color: var(--rose-pale);
+    color: var(--yellow-neon);
     text-decoration: none;
-    border: 1px solid var(--silver-dark);
-    border-radius: 3px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    border: 2px solid var(--yellow-neon);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
 }
 
 .btn:hover {
-    background: rgba(168, 168, 168, 0.1);
-    border-color: var(--silver);
-    color: white;
+    background: var(--yellow-neon);
+    color: var(--blue-deep);
+    box-shadow: 0 0 40px rgba(204, 255, 0, 0.5);
+    transform: translateY(-2px);
 }
 
 /* ====== INTRO ====== */
 .intro {
     padding: 100px 0;
-    background: var(--bg-darker);
+    background: var(--blue-deep);
     text-align: center;
 }
 
 .intro-icon {
-    font-size: 2rem;
-    color: var(--red-accent);
+    font-size: 2.2rem;
+    color: var(--yellow-neon);
     margin-bottom: 25px;
-    opacity: 0.8;
+    text-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
 }
 
 .intro h2 {
-    font-size: 2.2rem;
-    color: var(--rose-pale);
+    font-size: 2.3rem;
+    color: var(--text-primary);
     margin-bottom: 25px;
     font-weight: 600;
 }
@@ -155,9 +166,12 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--rose-pale);
+    background: linear-gradient(135deg, var(--yellow-neon) 0%, var(--orange-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 60px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .faq-grid {
@@ -169,26 +183,39 @@ body {
 .faq-card {
     background: var(--bg-card);
     padding: 35px 30px;
-    border-radius: 6px;
-    border: 1px solid rgba(168, 168, 168, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(204, 255, 0, 0.15);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--yellow-neon), var(--orange-gold));
 }
 
 .faq-card:hover {
     background: var(--bg-card-hover);
-    border-color: rgba(168, 168, 168, 0.2);
+    border-color: rgba(204, 255, 0, 0.3);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
 }
 
 .faq-icon {
-    font-size: 1.8rem;
-    color: var(--red-accent);
+    font-size: 2rem;
+    color: var(--yellow-neon);
     margin-bottom: 20px;
-    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
 }
 
 .faq-card h3 {
-    color: var(--rose-pale);
+    color: var(--text-primary);
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-weight: 600;
@@ -220,11 +247,11 @@ body {
 }
 
 .check-icon {
-    color: var(--red-accent);
+    color: var(--yellow-neon);
 }
 
 .cross-icon {
-    color: var(--silver-dark);
+    color: var(--text-muted);
 }
 
 .badge-police, .badge-fire, .badge-doj, .badge-crim, .badge-civ {
@@ -234,16 +261,16 @@ body {
     font-size: 0.9rem;
 }
 
-.badge-police { color: var(--red-accent); }
-.badge-fire { color: var(--red-deep); }
-.badge-doj { color: var(--silver); }
-.badge-crim { color: var(--silver-dark); }
+.badge-police { color: var(--orange-gold); }
+.badge-fire { color: var(--yellow-neon); }
+.badge-doj { color: var(--text-secondary); }
+.badge-crim { color: var(--text-muted); }
 .badge-civ { color: var(--text-muted); }
 
 /* ====== GLOSSAIRE ====== */
 .glossary {
     padding: 100px 0;
-    background: var(--bg-darker);
+    background: var(--blue-deep);
 }
 
 .glossary-grid {
@@ -255,25 +282,26 @@ body {
 .word {
     background: var(--bg-card);
     padding: 18px 20px;
-    border-radius: 4px;
-    border-left: 3px solid var(--silver-dark);
+    border-radius: 6px;
+    border-left: 3px solid var(--yellow-neon);
     font-size: 0.9rem;
     color: var(--text-secondary);
     transition: all 0.3s ease;
 }
 
 .word:hover {
-    border-left-color: var(--red-accent);
+    border-left-color: var(--orange-gold);
     background: var(--bg-card-hover);
+    transform: translateX(5px);
 }
 
 .abbr {
     display: inline-block;
-    background: var(--red-dark);
-    color: var(--rose-pale);
+    background: linear-gradient(135deg, var(--yellow-neon), var(--orange-gold));
+    color: var(--blue-deep);
     padding: 3px 10px;
-    border-radius: 2px;
-    font-weight: 600;
+    border-radius: 3px;
+    font-weight: 700;
     font-size: 0.75rem;
     margin-right: 10px;
     letter-spacing: 0.5px;
@@ -288,37 +316,38 @@ body {
 .heart-box {
     background: var(--bg-card);
     padding: 60px 50px;
-    border-radius: 6px;
+    border-radius: 8px;
     text-align: center;
-    border: 1px solid rgba(168, 168, 168, 0.15);
+    border: 1px solid rgba(204, 255, 0, 0.2);
     max-width: 750px;
     margin: 0 auto;
+    box-shadow: var(--shadow-glow);
 }
 
 .final-icon {
     font-size: 2.5rem;
-    color: var(--red-accent);
+    color: var(--yellow-neon);
     margin-bottom: 25px;
-    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
 }
 
 .heart-box h2 {
-    color: var(--rose-pale);
+    color: var(--text-primary);
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: 600;
 }
 
 .big-quote {
-    font-size: 1.3rem;
-    color: var(--rose-soft);
+    font-size: 1.4rem;
+    color: var(--yellow-neon);
     margin-bottom: 25px;
     line-height: 1.6;
     font-style: italic;
 }
 
 .heart-box p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 18px;
     color: var(--text-secondary);
     line-height: 1.8;
@@ -326,19 +355,19 @@ body {
 
 .signature {
     margin-top: 30px;
-    color: var(--rose-muted);
+    color: var(--orange-gold);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-style: italic;
 }
 
 /* ====== FOOTER ====== */
 footer {
-    background: var(--bg-darker);
+    background: var(--blue-deep);
     color: var(--text-muted);
     text-align: center;
     padding: 40px 25px;
-    border-top: 1px solid rgba(168, 168, 168, 0.1);
+    border-top: 1px solid rgba(204, 255, 0, 0.15);
 }
 
 .footer-content {
@@ -349,22 +378,22 @@ footer {
 }
 
 .footer-icon {
-    font-size: 1.2rem;
-    color: var(--silver-dark);
-    opacity: 0.6;
+    font-size: 1.3rem;
+    color: var(--yellow-neon);
+    opacity: 0.7;
 }
 
 footer p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 600px) {
-    .hero { min-height: 75vh; }
-    .section-title { font-size: 1.8rem; }
+    .hero { min-height: 80vh; }
+    .section-title { font-size: 1.9rem; }
     .faq-card { padding: 28px 22px; }
     .heart-box { padding: 40px 25px; }
-    .big-quote { font-size: 1.1rem; }
+    .big-quote { font-size: 1.15rem; }
     .intro, .faq-section, .glossary, .final-message { padding: 70px 0; }
 }
